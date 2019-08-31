@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ActivityScene.unity
+- path: Assets/Scenes/PressableButtonExample 1.unity
   isLoaded: 1
   isActive: 1
