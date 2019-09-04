@@ -9,8 +9,8 @@ services:
       - 443:443
     restart: always
     volumes:
-      ./server_config/nginx_config:/etc/nginx
-      ./server_config/SSL:/etc/ssl/private
+      - ./server_config/nginx_config:/etc/nginx
+      - ./server_config/SSL:/etc/ssl/private
     depends_on:
       - flask-app
 
