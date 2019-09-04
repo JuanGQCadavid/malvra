@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ActivitySceneAlternative.unity
     guid: 6d92b87c1a5d2c048aa6a45fe82acd47
+  - enabled: 1
+    path: Assets/Scenes/SlectionSceneClient.unity
+    guid: 95e7c9ffa40892d4683ee9cc9d548b56
   m_configObjects: {}
