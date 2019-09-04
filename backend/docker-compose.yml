@@ -8,7 +8,7 @@ services:
       - 80:80
       - 443:443
     restart: always
-    volumnes:
+    volumes:
       ./server_config/nginx_config:/etc/nginx
       ./server_config/SSL:/etc/ssl/private
     depends_on:
