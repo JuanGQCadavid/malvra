@@ -6,6 +6,10 @@ COPY . /app
 
 WORKDIR /app
 
+ARG ENVSTATE='PROD'
+
+ENV ENVSTATE $ENVSTATE
+
 RUN pip install -r requirements.txt
 
 EXPOSE 5000

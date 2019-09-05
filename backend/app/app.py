@@ -30,14 +30,16 @@ if __name__ == '__main__':
         state = os.environ['ENVSTATE'] = 'DEV'
     
     if state == 'PROD':
-        dev_state = True
-    elif state == 'DEV':
+        print("Production ENV")
         dev_state = False
+    elif state == 'DEV':
+        print("Deveploment ENV")
+        dev_state = True
     else:
         raise Exception("ENVSTATE is unknowing, STATE -> {}".format(state))
 
     try:
-        db = Db_bridge()
+        db = Db_bridge(dev_state)
         app.run(host='0.0.0.0', port=5000, debug=dev_state)
     except KeyboardInterrupt:
         print('Closing server....')
