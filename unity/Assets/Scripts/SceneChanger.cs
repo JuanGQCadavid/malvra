@@ -3,37 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChanger : MonoBehaviour
+namespace malvra
 {
-    // Start is called before the first frame update
-    void Start()
+    public class SceneChanger : MonoBehaviour
     {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
 
-    public void LoadDesbotonar()
-    {
-        SceneManager.LoadScene(1);
-    }
+        // Update is called once per frame
+        void Update()
+        {
 
-    public void LoadSiembraEnBanca()
-    {
-        SceneManager.LoadScene(1);
-    }
+        }
 
-    public void LoadSiembraEnCama()
-    {
-        SceneManager.LoadScene(1);
-    }
+        public void LoadDesbotonar()
+        {
+            SceneManager.LoadScene(1);
+        }
 
-    public void LoadCorte()
-    {
-        SceneManager.LoadScene(1);
+        public void LoadSiembraEnBanca()
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        public void LoadSiembraEnCama()
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        public void LoadCorte()
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        public void LoadCalendar()
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
