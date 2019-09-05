@@ -14,6 +14,30 @@ db = None;
 def hello_world_api():
     return 'Backend up!!'
 
+#Get all the workers
+@app.route('/api/workers/all')
+def get_workers():
+    workers = db.get_workers()
+    print(workers)
+    return jsonify(workers)
+
+@app.route('/api/workers/add', methods=['POST'])
+def add_worker():
+    return "To do ..."
+
+#Save a rotine to a worker
+@app.route('/api/routines/add', methods=['POST'])
+def add_routine():
+    return "To do ..."
+
+
+@app.route('/api/test/workers')
+def test_workers():
+    db.add_workers('Koko', 'Leonardo','Ortega','koko@loscantoresdechipuco.tocapues')
+    db.add_workers('Coronel', 'Julian','Coronel','Coronel@loscantoresdechipuco.tocapues')
+    db.add_workers('Karval', 'Carlos','Valencia','Karval@loscantoresdechipuco.tocapues')
+
+    return get_workers()
 @app.route('/')
 def hello_world_web():
     return 'Yo, sup bro'
