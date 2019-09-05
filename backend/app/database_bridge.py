@@ -53,3 +53,4 @@ class Db_bridge:
             return None;
         
         return new_worker
+
