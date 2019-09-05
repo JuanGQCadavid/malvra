@@ -81,7 +81,8 @@ namespace malvra
 
         private async Task GetTasksAsync(string employeeId)
         {
-            tasks = await ServerCaller.GetEmployeeTasksAsync(employeeId);
+            // tasks = await ServerCaller.GetEmployeeTasksAsync(employeeId);
+            tasks = await ServerCaller.GetEmployeeTasksAsync();
         }
         private void UpdateText(EmployeeTask task, GameObject button)
         {
