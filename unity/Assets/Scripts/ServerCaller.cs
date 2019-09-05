@@ -11,7 +11,6 @@ using Newtonsoft.Json;
 
 namespace malvra
 {
-
     public class EmployeeTask
     {
         public int block { get; set; }
@@ -50,7 +49,7 @@ namespace malvra
         public static async Task<EmployeeTask[]> GetEmployeeTasksAsync()
         {
             EmployeeTask[] tasks = null;
-            HttpResponseMessage response = await client.GetAsync(baseURL + "/temp");
+            HttpResponseMessage response = await client.GetAsync(baseURL + "/temp/");
             if (response.IsSuccessStatusCode)
             {
                 tasks = await response.Content.ReadAsAsync<EmployeeTask[]>();
@@ -61,7 +60,7 @@ namespace malvra
         public static async Task<EmployeeTask[]> GetEmployeeTasksAsync(string employeeId)
         {
             EmployeeTask[] tasks = null;
-            HttpResponseMessage response = await client.GetAsync(baseURL + "tasks?employee_id=" + employeeId);
+            HttpResponseMessage response = await client.GetAsync(baseURL + "temp?employee_id=" + employeeId);
             if (response.IsSuccessStatusCode)
             {
                 tasks = await response.Content.ReadAsAsync<EmployeeTask[]>();

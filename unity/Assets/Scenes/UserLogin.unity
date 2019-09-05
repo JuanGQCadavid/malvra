@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5860e33999228d648b2ec905f48377ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseButton: {fileID: 2204069621426241315, guid: 3f1f46cbecbe08e46a303ccfdb5b498a,
+  BaseButton: {fileID: 2204069621426241315, guid: 3c30d44798a8b1b4c853e6d9e56f5c2a,
     type: 3}
 --- !u!1 &487866777
 GameObject:
