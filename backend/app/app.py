@@ -10,14 +10,17 @@ app = Flask(__name__)
 db = None;
 
 
-@app.route('/api')
-def hello_world():
+@app.route('/api/')
+def hello_world_api():
     return 'Backend up!!'
+
+@app.route('/')
+def hello_world_web():
+    return 'Yo, sup bro'
 
 
 
 if __name__ == '__main__':
-    global db
     dev_state, state = None,None
 
     try:
