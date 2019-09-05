@@ -1,5 +1,5 @@
 # Data base bridge
-#from database_bridge import db_bridge
+from database_bridge import Db_bridge
 #API
 from flask import Flask, request, jsonify
 import json
@@ -34,7 +34,7 @@ if __name__ == '__main__':
         raise Exception("ENVSTATE is unknowing, STATE -> {}".format(state))
 
     try:
-        #db = db_bridge()
+        db = Db_bridge()
         app.run(host='0.0.0.0', port=5000, debug=dev_state)
     except KeyboardInterrupt:
         print('Closing server....')
