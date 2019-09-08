@@ -20,11 +20,11 @@ namespace malvra
         private EmployeeTask[] tasks;
 
         // Start is called before the first frame update
-        async void Start()
+        void Start()
         {
             try
             {
-                await GetTasksAsync(employeeId);
+                GetTasks(employeeId);
                 float x = 0;
                 float y = 0;
                 float z = 0.3f;
@@ -79,10 +79,10 @@ namespace malvra
 
         }
 
-        private async Task GetTasksAsync(string employeeId)
+        private void GetTasks(string employeeId)
         {
             // tasks = await ServerCaller.GetEmployeeTasksAsync(employeeId);
-            tasks = await ServerCaller.GetEmployeeTasksAsync();
+            tasks = ServerCaller.GetEmployeeTasks();
         }
         private void UpdateText(EmployeeTask task, GameObject button)
         {

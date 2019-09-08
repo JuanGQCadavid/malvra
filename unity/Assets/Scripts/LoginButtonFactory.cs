@@ -12,11 +12,12 @@ namespace malvra
 
         private Employee[] employees;
 
-        async void Start()
+        void Start()
         {
             try
             {
-                employees = await ServerCaller.GetEmployeesAsync();
+                //employees = await ServerCaller.GetEmployeesAsync();
+                employees = ServerCaller.GetEmployees();
                 float x = 0;
                 float y = 0;
                 float z = 0.3f;
