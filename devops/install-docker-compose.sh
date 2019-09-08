@@ -12,6 +12,7 @@ if ! [ -x "$(command -v docker)" ]; then
     #Start rigth now
     sudo systemctl start docker
     
+    sudo shutdown -r now
 else
     echo 'Docker is installed'
 fi
