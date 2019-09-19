@@ -23,7 +23,7 @@ docker run \
   --rm \
   -d \
   -p 8080:8080 \
-  -v ~ec2-user/jenkins-data:/var/jenkins_home \
+  -v ~/jenkins-data:/var/jenkins_home \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --name jenkins \
   jenkinsci/blueocean
