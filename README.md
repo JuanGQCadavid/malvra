@@ -2,6 +2,8 @@
 
 Sistema de apoyo para floricultura utilizando HoloLens.
 
+Direccion Backend -> 3.92.217.3:80
+
 ### Estructura 
 - lib -> Librerias y/o paquetes utilizados
 - Unity -> Proyecto en unity para HoloLens
