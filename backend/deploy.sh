@@ -16,5 +16,14 @@ else
     echo 'Docker is installed'
 fi
 
-docker stop api-server
-docker rm api-server
+docker pull jenkinsci/blueocean
+
+docker run \
+  -u root \
+  --rm \
+  -d \
+  -p 8080:8080 \
+  -v ~ec2-user/jenkins-data:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --name jenkins \
+  jenkinsci/blueocean
