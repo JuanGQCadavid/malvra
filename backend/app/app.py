@@ -2,12 +2,13 @@
 from database_bridge import Db_bridge
 #API
 from flask import Flask, request, jsonify
-from fake_backend import data
+from flask_cors import CORS
 import json
 import os
 
 
 app = Flask(__name__)
+CORS(app)
 db = None;
 
 
